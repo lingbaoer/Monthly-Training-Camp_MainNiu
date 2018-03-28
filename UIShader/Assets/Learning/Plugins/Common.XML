@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Common</name>
+    </assembly>
+    <members>
+        <member name="T:Common.CommonFunction">
+            <summary>
+            一些通用的方法
+            杨耀宾
+            </summary>
+        </member>
+        <member name="M:Common.CommonFunction.FindTarget(UnityEngine.Transform,System.String)">
+            <summary>
+            递归查找场景中的物体
+            </summary>
+            <param name="_target">包含要查找物体目标(查找目标)</param>
+            <param name="_name">物体的名称</param>
+            <returns>查找到的物体</returns>
+        </member>
+        <member name="F:Common.CommonFunction.m_materialDic">
+            <summary>
+            模型的原材质
+            </summary>
+        </member>
+        <member name="M:Common.CommonFunction.ChangeMaterial(UnityEngine.Transform,UnityEngine.Material[])">
+            <summary>
+            改变材质
+            </summary>
+            <param name="_modelTransform">模型的根节点</param>
+            <param name="_newMaterials">模型的新材质</param>
+        </member>
+        <member name="M:Common.CommonFunction.RecoverMater(UnityEngine.Transform,System.Collections.Generic.Dictionary{System.String,UnityEngine.Material[]})">
+            <summary>
+            复原材质
+            </summary>
+            <param name="_modelTransform">模型的根节点</param>
+            <param name="_materialDic">存储模型名称和对应材质的字典</param>
+        </member>
+        <member name="M:Common.CommonFunction.CloseMeshRenderer(UnityEngine.Transform)">
+            <summary>
+            关闭物体及其子物体的MeshRenderer
+            </summary>
+            <param name="_transform"></param>
+        </member>
+        <member name="M:Common.CommonFunction.OpenMeshRenderer(UnityEngine.Transform)">
+            <summary>
+            显示物体及其子物体的MeshRenderer
+            </summary>
+            <param name="_transform"></param>
+        </member>
+        <member name="M:Common.CommonFunction.GetFileNames(System.String,System.String)">
+            <summary>
+            获取制定文件夹里，指定后缀的文件的文件名
+            </summary>
+            <param name="_folderPath">文件夹地址</param>
+            <param name="_fileExtension">文件后缀</param>
+            <returns>文件名列表</returns>
+        </member>
+        <member name="M:Common.CommonFunction.ReadImage(System.String)">
+            <summary>
+            获取文件夹中的图片
+            (仅适用于一个文件夹下包含多个子文件夹，子文件夹中存放有图片，返回子文件夹名和其中存放的图片)
+            </summary>
+            <param name="_imageFilePath">放置图片的文件夹路径</param>
+            <returns>返回以文件夹名为键，文件夹中的图片为值的字典</returns>
+        </member>
+        <member name="M:Common.CommonFunction.GetImageByte(System.String)">
+            <summary>
+            获取文件的byte数据
+            </summary>
+            <param name="_imagePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.CommonFunction.ConvertUTC2DateTime(System.Double)">
+            <summary>
+            Unix时间戳转为DataTime
+            </summary>
+            <param name="utcTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.CommonFunction.ConvertDateTime2UTC(System.DateTime)">
+            <summary>
+            DataTime转为Unix时间戳
+            </summary>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.CommonFunction.DelayToInvokeDo(System.Action,System.Single)">
+            <summary>
+            延时执行
+            使用方法： StartCoroutine(CommonFunction.DelayToInvokeDo(() => { /////////自己的操作，方法、逻辑//////////; }, 0.1f));
+            示例： StartCoroutine(CommonFunction.DelayToInvokeDo(() => { Application.LoadLevel(“Option”); }, 0.1f));
+            
+            </summary>
+            <param name="action">活动</param>
+            <param name="_delaySeconds">延时时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.CommonFunction.UGUIToWord(UnityEngine.Canvas,UnityEngine.Transform,UnityEngine.Camera)">
+            <summary>
+            UGUI坐标转换为世界坐标
+            </summary>
+            <param name="_canvas"></param>
+            <param name="_UITransform"></param>
+            <param name="_mainCamera"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.CommonFunction.SignedAngleBetween(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>
+            计算向量a到向量b的旋转角，n为旋转方向
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
